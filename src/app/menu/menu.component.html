@@ -1,0 +1,139 @@
+<header class="header">Menu</header>
+<div class="bg">
+  <div class="vertical-menu">
+    <a
+      (click)="toggleSubMenu('columnchooser', 'Catalog')"
+      class="main-menu-item"
+    >
+      <dx-button
+        id="columnchooser"
+        icon="columnchooser"
+        type="success"
+      ></dx-button>
+      <label>Catalog</label>
+    </a>
+
+    <div *ngIf="showSubMenu === 'columnchooser'" class="submenu-container">
+      <div class="submenu">
+        <label>{{ currentMenu }}</label>
+
+        <a dx-item>
+          <dx-button
+            routerLink="/vendor"
+            id="tableproperties"
+            icon="tableproperties"
+            type="success"
+          ></dx-button>
+          <label>18-vendor Catalog</label>
+        </a>
+        <a dx-item>
+          <dx-button
+            id="splitcells"
+            icon="columnchooser"
+            type="success"
+          ></dx-button>
+          <label>76- Markers Catalog</label>
+        </a>
+        <a dx-item>
+          <dx-button
+            id="tableproperties"
+            icon="tableproperties"
+            type="success"
+          ></dx-button>
+          <label>20-customer Catalog</label>
+        </a>
+        <a dx-item>
+          <dx-button
+            id="tableproperties"
+            icon="tableproperties"
+            type="success"
+          ></dx-button>
+          <label>22-Material Catalog</label>
+        </a>
+        <a dx-item>
+          <dx-button
+            id="preferences"
+            icon="preferences"
+            type="success"
+          ></dx-button>
+          <label>1-Style Catalog</label>
+        </a>
+
+        <a dx-item>
+          <dx-button
+            id="tableproperties"
+            icon="tableproperties"
+            type="success"
+          ></dx-button>
+          <label>24-Conversions Catalog</label>
+        </a>
+      </div>
+    </div>
+
+    <a>
+      <dx-button
+        id="tableproperties"
+        icon="tableproperties"
+        type="success"
+      ></dx-button>
+      <label>Inventory</label>
+    </a>
+
+    <a>
+      <dx-button
+        id="columnchooser"
+        icon="columnchooser"
+        type="success"
+      ></dx-button>
+      <label>Leather</label>
+    </a>
+
+    <a>
+      <dx-button id="splitcells" icon="splitcells" type="success"></dx-button>
+      <label>Invoice/Export</label>
+    </a>
+
+    <a>
+      <dx-button id="car" icon="car" type="success"></dx-button>
+      <label>Invoice/Export</label>
+    </a>
+
+    <a>
+      <dx-button id="import" icon="box" type="success"></dx-button>
+      <label>Import/Export</label>
+    </a>
+
+    <a>
+      <dx-button
+        id="Enginneering"
+        icon="preferences"
+        type="success"
+      ></dx-button>
+      <label>Engineering</label>
+    </a>
+
+    <a>
+      <dx-button id="Accounting" icon="money" type="success"></dx-button>
+      <label>Accounting</label>
+    </a>
+
+    <a>
+      <dx-button id="human-resource" icon="group" type="success"></dx-button>
+      <label>Human Resources</label>
+    </a>
+
+    <a>
+      <dx-button id="payroll" icon="user" type="success"></dx-button>
+      <label>Payroll</label>
+    </a>
+
+    <a>
+      <dx-button
+        id="administration"
+        icon="preferences"
+        type="success"
+      ></dx-button>
+      <label>Administration</label>
+    </a>
+  </div>
+</div>
