@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { RouterModule, Routes } from '@angular/router';
+import { DxBoxModule } from 'devextreme-angular'
 
-
-import { DxButtonModule,DxRadioGroupModule, DxToolbarModule, DxListModule, DxMenuModule } from "devextreme-angular";
+import { DxButtonModule,DxRadioGroupModule, DxToolbarModule, DxListModule, DxMenuModule,DxFormModule, DxNumberBoxModule, DxCheckBoxModule} from "devextreme-angular";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +12,8 @@ import { VendorCatalogComponent } from './pages/vendor-catalog/vendor-catalog.co
 import { ComponentsComponent } from './components/components.component';
 import { MenuComponent } from './menu/menu.component';
 import dxOverlay from 'devextreme/ui/overlay';
+import { DxDataGridModule } from 'devextreme-angular';
+
 
 @NgModule({
   declarations: [
@@ -29,10 +31,19 @@ import dxOverlay from 'devextreme/ui/overlay';
     RouterModule,
     DxListModule,
     DxMenuModule,
-    
+    DxBoxModule,
+    DxDataGridModule,
+    DxFormModule,
+    DxNumberBoxModule,
+    DxCheckBoxModule
+
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
+
+
