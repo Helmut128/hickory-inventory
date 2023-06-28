@@ -1,89 +1,74 @@
-.header-vendor{
-  display: flex;
-  justify-content: space-between;
-  font-size: 15px;
-  font-weight: bold;
+.parent {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100vh;
+  width: 100vw;
 }
 
-.dx-icon-close{
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.vertical-menu {
-  width: 200px;
-  height: 100%;
-  padding-top: 200px;
-}
-
-.vertical-menu a {
-  display: block;
-  padding: 12px;
-  text-decoration: none;
-}
-
-.rect {
-  text-align: center;
-  font-size: 30px;
-  padding-top: 10px;
-  height: 100%;
-}
-.demo-dark {
-  background: #5777B0;
-}
-
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-}
-
-.check {
-  background-color: #5777B0;
+.div1 {
+  grid-area: 1 / 1 / 3 / 4;
+  background-color: #5777b0;
   border: 1px dashed #eeee;
-}
-
-.check2{
-  display: flex;
-  align-items: flex-end;
-  border: 1px dashed #eeee;
-}
-
-.check3 {
-  display: flex;
-  align-items: flex-end;
-
-}
-
-.menu1{
-  padding: 15px;
-}
-.buttons2{
   display: flex;
   flex-direction: column;
-  width: 30%;
-  justify-content: space-between;
-
+  align-items: end;
+  grid-template-rows: 1fr;
+  padding: 20px;
 }
-.demo-dark.footer{
+
+.div2 {
+  grid-area: 3 / 1 / 11 / 4;
+  // background-color: aqua;
+  border: 1px dashed #eeee;
+}
+.div3 {
+  grid-area: 6 / 4 / 7 / 11;
   display: flex;
-  flex-direction: row;
   justify-content: end;
+  padding: 20px;
+
+  //align-items: end;
+  // background-color: azure;
+}
+.div4 {
+  grid-area: 7 / 4 / 11 / 11;
+  //background-color: beige;
+  border: 1px dashed #eeee;
+}
+.div5 {
+  grid-area: 1 / 4 / 6 / 9;
+  //background-color: blueviolet;
+}
+.div6 {
+  grid-area: 1 / 9 / 6 / 11;
+}
+
+#gridContainer {
+  height: 100% !important;
+  width: 100% !important;
+  padding: 5px;
+}
+
+#form-container {
   padding: 10px;
-
 }
-.sales{
+
+.sales {
   margin: 5px;
-
 }
 
-.checkbox{
-  margin: 4px;
-
+.subContainer {
+  display: flex;
+  padding-top: 50px;
+  justify-content: end;
 }
 
-.sales1{
-  margin: 3px;
+.subContainer2 {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  align-content: center;
 }
-

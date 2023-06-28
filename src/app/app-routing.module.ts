@@ -6,20 +6,18 @@ import { MenuComponent } from './menu/menu.component';
 import { AppComponent } from './app.component';
 
 const routes: Routes = [
+  { path: 'vendor', component: VendorCatalogComponent },
 
-    { path: 'vendor', component: VendorCatalogComponent },
+  { path: 'menu', component: MenuComponent },
 
-    {path: 'menu', component: MenuComponent },
+  { path: 'components', component: ComponentsComponent },
 
-    { path: 'components', component: ComponentsComponent},
-
-    {path: 'home', component: AppComponent}
-
-
+  { path: 'home', component: AppComponent },
+  { path: '**', redirectTo: 'vendor' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

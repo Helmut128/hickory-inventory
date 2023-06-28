@@ -1,122 +1,44 @@
-<header class="header-vendor" style="background-color: #4a628e">
-  Vendor Catalog
-  <button>
-    <i class="dx-icon-close"></i>
-  </button>
-</header>
+<div class="parent">
+  <div class="div1">
+    <dx-check-box text="Show Inactive" [value]="false"></dx-check-box>
 
-<div class="check">
-  <dx-box direction="row" width="100%" [height]="500">
-    <dxi-item class="check2" [ratio]="1">
-      <label>
-        Show Inactive
-        <input class="checkbox" type="checkbox" />
-      </label>
-      <label
-        >Filter international vendors
-        <input class="checkbox" type="checkbox" />
-      </label>
-      <div class="buttons">
-        <dx-button class="sales" type="success">New Suplier</dx-button>
-        <br />
-        <dx-button class="sales" type="success">Refresh</dx-button>
-      </div>
+    <dx-check-box
+      text="Filter International Vendors"
+      [value]="false"
+    ></dx-check-box>
 
-      <dx-data-grid
-        id="gridContainer"
-        keyExpr="ID"
-        [columns]="['Prov Cod', 'Vendor name', 'User List']"
-        [showBorders]="true"
-        width="100%"
-        [height]="200"
-      >
-      </dx-data-grid>
-    </dxi-item>
+    <div class="subContainer">
+      <dx-button class="sales" type="success" text="New Suplier"></dx-button>
 
-    <dxi-item class="menu1" [ratio]="2">
-      <dx-form width="40%">
-        <dxi-item dataField="name"></dxi-item>
+      <dx-button class="sales" type="success" text="Refresh"></dx-button>
+    </div>
+  </div>
 
-        <dxi-item dataField="abbreviation"></dxi-item>
+  <div class="div2">
+    <dx-data-grid
+      id="gridContainer"
+      keyExpr="ID"
+      [columns]="['Prov Cod', 'Vendor name', 'User List']"
+      [showBorders]="true"
+      width="100%"
+      [height]="200"
+    >
+    </dx-data-grid>
+  </div>
+  <div class="div3">
+    <dx-button
+      type="success"
+      text="New Address"
+      style="margin: 10px"
+    ></dx-button>
 
-        <dxi-item dataField="telephone"></dxi-item>
+    <dx-button type="success" text="Save" style="margin: 10px"></dx-button>
 
-        <dxi-item dataField="address"></dxi-item>
+    <dx-button type="success" text="Delete" style="margin: 10px"></dx-button>
 
-        <dxi-item dataField="Contact"></dxi-item>
-
-        <dxi-item dataField="Zip"></dxi-item>
-
-        <dxi-item dataField="Email"></dxi-item>
-
-        <dxi-item dataField="Payment"></dxi-item>
-
-        <dxi-item dataField="Notes"></dxi-item>
-
-        <dxi-item
-          editorType="dxTextArea"
-          editorOptions="{ height: 20 }"
-        ></dxi-item>
-      </dx-form>
-    </dxi-item>
-
-    <dxi-item class="check3" [ratio]="1">
-      <label>
-        Active Provider
-        <input class="checkbox" type="checkbox" />
-      </label>
-
-      <label>
-        Active Address
-        <input class="checkbox" type="checkbox" />
-      </label>
-
-      <label>
-        Inter Provider
-        <input class="checkbox" type="checkbox" />
-      </label>
-
-      <label>
-        Wire
-        <input class="checkbox" type="checkbox" />
-      </label>
-
-      <label>
-        Commission
-        <input class="checkbox" type="checkbox" />
-      </label>
-      <label>
-        Is Default
-        <input class="checkbox" type="checkbox" />
-      </label>
-    </dxi-item>
-
-    <dxi-item [ratio]="1">
-      <div class="buttons2">
-        <dx-button class="sales" type="success">Sales People</dx-button>
-
-        <dx-button class="sales" type="success">Materials</dx-button>
-
-        <dx-button class="sales" type="success">Capital</dx-button>
-
-        <dx-button class="sales" type="success">All providers</dx-button>
-      </div>
-    </dxi-item>
-
-    <dxi-item class="rect demo-dark footer" [ratio]="1">
-      <div class="buttons3">
-        <dx-button class="sales1" type="success">New address</dx-button>
-
-        <dx-button class="sales1" type="success">Save</dx-button>
-
-        <dx-button class="sales1" type="success">Save</dx-button>
-
-        <dx-button class="sales1" type="success">Edit</dx-button>
-      </div>
-    </dxi-item>
-  </dx-box>
-
-  <div class="container3">
+    <dx-button type="success" text="Edit" style="margin: 10px"></dx-button>
+  </div>
+  <div class="div4">
     <dx-data-grid
       class="gridContainer2"
       id="gridContainer"
@@ -134,5 +56,68 @@
       [height]="100"
     >
     </dx-data-grid>
+  </div>
+  <div class="div5">
+    <div id="form-container">
+      <dx-form id="form" [colCount]="2">
+        <dxi-item itemType="group">
+          <dxi-item dataField="Name"></dxi-item>
+          <dxi-item dataField="abbreviation"></dxi-item>
+          <dxi-item dataField="Address">
+            <dx-text-area [height]="50"> </dx-text-area
+          ></dxi-item>
+          <dxi-item dataField="telephone"></dxi-item>
+          <dxi-item dataField="Contact"></dxi-item>
+          <dxi-item dataField="Zip"></dxi-item>
+          <dxi-item dataField="Payment"></dxi-item>
+          <dxi-item dataField="Notes">
+            <dx-text-area [height]="70"> </dx-text-area>
+          </dxi-item>
+        </dxi-item>
+        <dxi-item itemType="group">
+          <dxi-item>
+            <dx-check-box text="Active Providers" [value]="true"></dx-check-box>
+          </dxi-item>
+          <dxi-item>
+            <dx-check-box text="Active address" [value]="false"></dx-check-box>
+          </dxi-item>
+          <dxi-item>
+            <dx-check-box text="Inter Provider" [value]="false"></dx-check-box>
+          </dxi-item>
+          <dxi-item>
+            <dx-check-box text="Wire" [value]="false"></dx-check-box>
+          </dxi-item>
+          <dxi-item>
+            <dx-check-box text="Commission" [value]="false"></dx-check-box>
+          </dxi-item>
+          <dxi-item>
+            <dx-check-box text="Is Default" [value]="true"></dx-check-box>
+          </dxi-item>
+        </dxi-item>
+      </dx-form>
+    </div>
+  </div>
+  <div class="div6">
+    <div class="subContainer2">
+      <dx-button
+        type="success"
+        text="Sales People"
+        style="margin: 10px"
+      ></dx-button>
+
+      <dx-button
+        type="success"
+        text="Materials"
+        style="margin: 10px"
+      ></dx-button>
+
+      <dx-button type="success" text="Capital" style="margin: 10px"></dx-button>
+
+      <dx-button
+        type="success"
+        text="All providers"
+        style="margin: 10px"
+      ></dx-button>
+    </div>
   </div>
 </div>
