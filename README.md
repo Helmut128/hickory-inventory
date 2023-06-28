@@ -4,8 +4,7 @@ Subiendo la segunda pantalla:
 
 Resultado: 
 
-
-![image](https://github.com/Helmut128/hickory-inventory/assets/65142656/0bd30cf4-06dd-4f76-a9a6-95fa1130b85a)
+![image](https://github.com/Helmut128/hickory-inventory/assets/65142656/fd3128e3-f431-41db-9ddb-a38a040727fd)
 
 
 Contiene tambien un menú (que no vamos a utilizar pero que ahí queda) 
