@@ -71,3 +71,11 @@
   align-content: flex-end;
   flex-direction: column;
 }
+
+@media screen and (max-width: 460px) {
+  .subContainer {
+    padding: 10px;
+    width: 80%;
+    height: 80%;
+  }
+}
