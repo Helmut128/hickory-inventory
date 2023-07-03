@@ -13,3 +13,9 @@ Contiene tambien un menú (que no vamos a utilizar pero que ahí queda)
 
 Notas: Se tiene que corregir para que los estilos no choquen y hacerlo un poco mas responsive. 
 Tambien el etiquetado es escencial, junto con una mejora significativa del código 
+
+![image](https://github.com/Helmut128/hickory-inventory/assets/65142656/33d24f44-b490-42ca-a1d2-6cc9077320d5) 
+
+Ingresando el @media para que sea adaptable para dispositivos mobiles 
+
+
